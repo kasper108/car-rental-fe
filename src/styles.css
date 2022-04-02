@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+a{
+  text-decoration: none;
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  font-family: 'Dosis', sans-serif;
+}
+.logo{
+  background: forestgreen;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+}
+.graficlogo{
+  padding: 5px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+nav{
+  margin: auto;
+  height: 100px;
+  float: left;
+}
+.topnav{
+  float: left;
+  background-color: white;
+  font-size: 26px;
+  margin-top: 40px;
+}
+.topnav a{
+  color: black;
+  padding: 14px 14px;
+  font-size: 26px;
+
+}
+.topnav a:hover{
+  border-bottom: 2px solid green;
+}
+.facebooklogo{
+  width: 20px;
+  height: 20px;
+}
+.gogglelogo{
+  width: 20px;
+  height: 20px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-color: forestgreen;
+  position: absolute;
+  bottom: 0;
+}
+.footer img{
+  margin-left: 12px;
+  margin-top: 40px;
+  opacity: unset;
+  background-color: forestgreen;
+
+}
+
