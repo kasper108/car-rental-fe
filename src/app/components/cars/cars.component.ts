@@ -14,8 +14,9 @@ export class CarsComponent implements OnInit {
 
   ngOnInit(): void {
       this.carsService.getCars().subscribe(
-      res => {this.cars = res}
+      res => {
+        console.log(res);
+        this.cars = res}
     );
-    //   console.log(this.carsService.getCars())
   }
 }
