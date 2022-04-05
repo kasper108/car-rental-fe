@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CarsService} from "../../services/cars.service";
 
 @Component({
@@ -9,14 +9,34 @@ import {CarsService} from "../../services/cars.service";
 export class CarsComponent implements OnInit {
 
   cars: any[] | undefined;
+  errorFound: Boolean = false;
 
-  constructor(private carsService: CarsService ) {}
+  constructor(private carsService: CarsService) {
+  }
 
   ngOnInit(): void {
-      this.carsService.getCars().subscribe(
-      res => {
-        console.log(res);
-        this.cars = res}
-    );
+
+    const carObserver = {
+      next: (result: any) => {
+        console.log(result)
+        this.cars = result
+      },
+      error: (err: any) => {
+        console.log(err)
+        this.errorFound = false
+      }
+    }
+
+    this.carsService.getCars().subscribe(carObserver);
+
+  }
+
+  deleteCar(id: Number): void {
+    this.carsService.deleteCar(id).subscribe({
+      next: (result: any) => {
+
+      },
+      error: (err => console.log(err))
+    })
   }
 }

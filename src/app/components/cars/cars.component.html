@@ -1,5 +1,5 @@
-<ul>
-  <table class="my-lg-2 table table-stripped">
+
+  <table class="my-lg-2 table table-stripped" *ngIf="!errorFound">
     <thead class="thead-dark">
     <tr class="table-primary">
       <th scope="col">Id</th>
@@ -9,6 +9,7 @@
       <th scope="col">FuelType</th>
       <th scope="col">Transmission</th>
       <th scope="col">DayPrice</th>
+      <th scope="col">ACTIONS</th>
     </tr>
     </thead>
     <tbody>
@@ -20,8 +21,14 @@
         <td>{{car.fuelType}}</td>
         <td>{{car.transmission}}</td>
         <td>{{car.dayPrice}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteCar(car.id)">DELETE</button>
+        </td>
       </tr>
     </tbody>
   </table>
-</ul>
+<div *ngIf="errorFound">
+  <p>Error connecting to Data Base</p>
+  <p>Please contact support team !</p>
+</div>
 

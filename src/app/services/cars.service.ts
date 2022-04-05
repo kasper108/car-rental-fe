@@ -12,4 +12,8 @@ export class CarsService {
   getCars(): Observable<any>{
     return this.httpClient.get<any>('http://localhost:8080/api/v1/cars/all');
   }
+
+  deleteCar(id: Number): Observable<any> {
+    return new Observable<any>();
+  }
 }
