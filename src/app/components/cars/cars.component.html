@@ -13,22 +13,22 @@
     </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let car of this.cars">
-        <td>{{car.id}}</td>
-        <td>{{car.brand}}</td>
-        <td>{{car.regCode}}</td>
-        <td>{{car.year}}</td>
-        <td>{{car.fuelType}}</td>
-        <td>{{car.transmission}}</td>
-        <td>{{car.dayPrice}}</td>
-        <td>
-          <button class="btn btn-danger" (click)="deleteCar(car.id)">DELETE</button>
-        </td>
-      </tr>
+    <tr *ngFor="let car of this.cars">
+      <td>{{car.id}}</td>
+      <td>{{car.brand}}</td>
+      <td>{{car.regCode}}</td>
+      <td>{{car.year}}</td>
+      <td>{{car.fuelType}}</td>
+      <td>{{car.transmission}}</td>
+      <td>{{car.dayPrice}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteCar(car.id)">DELETE</button>
+      </td>
+    </tr>
     </tbody>
   </table>
-<div *ngIf="errorFound">
-  <p>Error connecting to Data Base</p>
-  <p>Please contact support team !</p>
-</div>
+  <div *ngIf="errorFound">
+    <p>Error connecting to Data Base</p>
+    <p>Please contact support team !</p>
+  </div>
 

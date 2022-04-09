@@ -7,7 +7,8 @@ import { UserComponent } from './components/user/user.component';
 import {RouterModule} from "@angular/router";
 import { AdminComponent } from './components/admin/admin.component';
 import { CarsComponent } from './components/cars/cars.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { HttpClientModule} from "@angular/common/http";
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     UserComponent,
     AdminComponent,
     CarsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
