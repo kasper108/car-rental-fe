@@ -1,0 +1,36 @@
+
+  <table class="my-lg-2 table table-stripped" *ngIf="!errorFound">
+    <thead class="thead-dark">
+    <tr class="table-primary">
+      <th scope="col">Id</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Reg.code</th>
+      <th scope="col">Year</th>
+      <th scope="col">FuelType</th>
+      <th scope="col">Transmission</th>
+      <th scope="col">DayPrice</th>
+      <th scope="col">ACTIONS</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of this.cars">
+        <td>{{car.id}}</td>
+        <td>{{car.brand}}</td>
+        <td>{{car.regCode}}</td>
+        <td>{{car.year}}</td>
+        <td>{{car.fuelType}}</td>
+        <td>{{car.transmission}}</td>
+        <td>{{car.dayPrice}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteCar(car.id)">DELETE</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<div *ngIf="errorFound">
+  <p>Error connecting to Data Base</p>
+  <p>Please contact support team !</p>
+</div>
+<div>
+    <button class="btn btn-info" routerLinkActive='active' routerLink='/create-car'>CREATE NEW CAR</button>
+</div>

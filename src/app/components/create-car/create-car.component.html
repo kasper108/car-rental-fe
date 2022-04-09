@@ -1,0 +1,56 @@
+<h3 xmlns="http://www.w3.org/1999/html"> Create New Car </h3>
+<form #f="ngForm" (ngSubmit)="createCar(f)">
+  <div class="form-group">
+
+    <label for="regCode"> Registration Code</label>
+    <input name="regCode" type="text" class="form-control" id="regCode"
+           ngModel
+           #regCodeField="ngModel"
+           required
+           [class.field-error]="f.submitted && regCodeField.invalid">
+
+    <label for="brand"> Brand</label>
+    <input name="brand" type="text" class="form-control" id="brand"
+           ngModel
+           #brandField="ngModel"
+           required
+           [class.field-error]="f.submitted && brandField.invalid">
+
+    <label for="year"> Year</label>
+    <input name="year" type="number" class="form-control" id="year"
+           ngModel
+           #yearField="ngModel"
+           required
+           [class.field-error]="f.submitted && yearField.invalid">
+    >
+
+    <label for="sitCount"> Sit Count</label>
+    <input name="sitCount" type="number" class="form-control" id="sitCount"
+           ngModel
+           #sitCountField="ngModel"
+           required
+           [class.field-error]="f.submitted && sitCountField.invalid">>
+
+    <label for="dayPrice"> Day Price</label>
+    <input name="dayPrice" type="number" class="form-control" id="dayPrice"
+           ngModel
+           #dayPriceField="ngModel"
+           required
+           [class.field-error]="f.submitted && dayPriceField.invalid">>
+
+    <label for="transmission"> Transmission Type</label>
+    <input name="transmission" type="text" class="form-control" id="transmission"
+           ngModel
+           #transmissionField="ngModel"
+           required
+           [class.field-error]="f.submitted && transmissionField.invalid">>
+
+    <label for="fuelType"> Fuel Type</label>
+    <input name="fuelType" type="text" class="form-control" id="fuelType"
+           ngModel
+           #fuelTypeField="ngModel"
+           required
+           [class.field-error]="f.submitted && fuelTypeField.invalid">>
+  </div>
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+</form>
