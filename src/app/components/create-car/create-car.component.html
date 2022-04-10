@@ -1,56 +1,78 @@
 <h3 xmlns="http://www.w3.org/1999/html"> Create New Car </h3>
 <form #f="ngForm" (ngSubmit)="createCar(f)">
-  <div class="form-group">
+  <div class="">
 
     <label for="regCode"> Registration Code</label>
-    <input name="regCode" type="text" class="form-control" id="regCode"
+    <input name="regCode" type="text" class="" id="regCode"
            ngModel
            #regCodeField="ngModel"
            required
            [class.field-error]="f.submitted && regCodeField.invalid">
+    <br>
 
     <label for="brand"> Brand</label>
-    <input name="brand" type="text" class="form-control" id="brand"
+    <input name="brand" type="text" class="" id="brand"
            ngModel
            #brandField="ngModel"
            required
            [class.field-error]="f.submitted && brandField.invalid">
+    <br>
 
     <label for="year"> Year</label>
-    <input name="year" type="number" class="form-control" id="year"
+    <input name="year" type="number" class="" id="year"
            ngModel
            #yearField="ngModel"
            required
            [class.field-error]="f.submitted && yearField.invalid">
-    >
+    <br>
 
     <label for="sitCount"> Sit Count</label>
-    <input name="sitCount" type="number" class="form-control" id="sitCount"
+    <select name="sitCount" type="number" class="" id="sitCount"
            ngModel
            #sitCountField="ngModel"
            required
-           [class.field-error]="f.submitted && sitCountField.invalid">>
+           [class.field-error]="f.submitted && sitCountField.invalid">
+      <option value="1"> 1 </option>
+      <option value="2"> 2 </option>
+      <option value="3"> 3 </option>
+      <option value="4"> 4 </option>
+      <option value="5"> 5 </option>
+      <option value="6"> 6 </option>
+      <option value="7"> 7 </option>
+      </select>
+    <br>
 
-    <label for="dayPrice"> Day Price</label>
-    <input name="dayPrice" type="number" class="form-control" id="dayPrice"
+    <label for="dayPrice"> Daily Price</label>
+    <input type="number" name="dayPrice" class="" id="dayPrice" min="1"
            ngModel
            #dayPriceField="ngModel"
            required
-           [class.field-error]="f.submitted && dayPriceField.invalid">>
+           [class.field-error]="f.submitted && dayPriceField.invalid">
+    <br>
 
-    <label for="transmission"> Transmission Type</label>
-    <input name="transmission" type="text" class="form-control" id="transmission"
+    <label for="transmission">Transmission Type</label>
+    <select name="transmission" type="text" class="" id="transmission"
            ngModel
            #transmissionField="ngModel"
            required
-           [class.field-error]="f.submitted && transmissionField.invalid">>
+           [class.field-error]="f.submitted && transmissionField.invalid">
+      <option value="MECH"> Manual </option>
+      <option value="AUTO"> Automatic </option>
+    </select>
+
+    <br>
 
     <label for="fuelType"> Fuel Type</label>
-    <input name="fuelType" type="text" class="form-control" id="fuelType"
+    <select name="fuelType" type="text" class="" id="fuelType"
            ngModel
            #fuelTypeField="ngModel"
            required
            [class.field-error]="f.submitted && fuelTypeField.invalid">>
+      <option value="PETROL"> Petrol </option>
+      <option value="DIESEL"> Diesel </option>
+      <option value="HYBRID"> Hybrid </option>
+      <option value="ELECTRIC"> Electric </option>
+    </select>
   </div>
-    <button type="submit" class="btn btn-primary">SUBMIT</button>
+    <button type="submit" class="">SUBMIT</button>
 </form>

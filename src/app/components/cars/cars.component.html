@@ -1,7 +1,7 @@
 
-  <table class="my-lg-2 table table-stripped" *ngIf="!errorFound">
-    <thead class="thead-dark">
-    <tr class="table-primary">
+  <table class="" *ngIf="!errorFound">
+    <thead class="">
+    <tr class="">
       <th scope="col">Id</th>
       <th scope="col">Brand</th>
       <th scope="col">Reg.code</th>
@@ -22,7 +22,7 @@
         <td>{{car.transmission}}</td>
         <td>{{car.dayPrice}}</td>
         <td>
-          <button class="btn btn-danger" (click)="deleteCar(car.id)">DELETE</button>
+          <button class="delete" (click)="deleteCar(car.id)">DELETE</button>
         </td>
       </tr>
     </tbody>
@@ -32,5 +32,5 @@
   <p>Please contact support team !</p>
 </div>
 <div>
-    <button class="btn btn-info" routerLinkActive='active' routerLink='/create-car'>CREATE NEW CAR</button>
+    <button class="create" routerLinkActive='active' routerLink='/create-car'>CREATE NEW CAR</button>
 </div>
